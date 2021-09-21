@@ -1,17 +1,17 @@
-/* RESET */
+/* RESET (GENERAL) */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* COMMON */
 body{
     height: 100vh;
     font-family: 'Lato', sans-serif;
     background:linear-gradient(180deg, #1EBEA5, #00E676, #D0E9EA, #EDF8F5, #ffffff);
 }
 
+/* CONTENITORE PRINCIPALE */
 #root{
     width: 80%;
     height: 95%;
@@ -21,12 +21,13 @@ body{
 }
 
 /* MAIN */
-
 /* common */
 .line_header{
     height: 70px;
     background-color: #eaeaea;
-    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .left_menu .line_header{
     border-right: 1px solid lightgray;
@@ -38,16 +39,49 @@ body{
     background-color: #ffffff;
 }
 
+/* INSIDE 
+ LINE_HEADER */
+.logo{
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;  
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+.logo img{
+    width: 100%;
+}
+
+.tools{
+    display: inline-block;
+}
+
+.tools i{
+    margin-right: 25px;
+    color: #b1b1b1;
+    font-size: 1.3em;
+}
+/* ---------------- */
+
 .desk_notifications{
     height: 70px;
     background-color: #8edafc;
-    /* border:1px solid red; */
+}
+
+.desk_notifications .logo{
+    background-color: #f2fbff;
+    padding: 15px;
+}
+.desk_notifications .logo i{
+    color: #8edafc; 
 }
 
 .search_box{
     height: 50px;
     background-color: #fafafa;
     padding: 8px;
+    /* overflow: hidden; */
     /* border: 1px solid red; */
 }
 .search{
@@ -92,7 +126,16 @@ body{
 .line_input_chat{
     height: 70px;
     background-color: #f3eeea;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     /* border: 1px solid black; */
+}
+.line_input_chat input{
+    flex-grow: 1;
+}
+.line_input_chat i{
+    margin: 0px 35px;
 }
 
 
