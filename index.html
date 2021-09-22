@@ -58,11 +58,11 @@
 
                 <ul class="contacts_list">
 
-                    <li class="d_flex contact">
+                    <li class="d_flex contact" v-for="(contact, index) in contacts">
                         <div class="logo">
-                            <img src="img/avatar_2.jpg" alt="">
+                            <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
                         </div>
-                        <div class="contact_name">Diego</div>
+                        <div class="contact_name">{{contact.name}}</div>
                     </li>
 
                     

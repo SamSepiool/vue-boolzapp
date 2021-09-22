@@ -131,6 +131,7 @@ body{
 .contact{
     height: 5rem;  
     padding-left: .625rem; 
+    border-bottom: .0625rem solid lightgray;
 }
 
 .contacts_list .contact .contact_name{
