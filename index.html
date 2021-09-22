@@ -14,25 +14,21 @@
     </head>
     <body>
 
+        <!-- MAIN APP-BOX -->
+        <div id="root" class="d_flex">
 
-
-        <div id="root">
-
-            
-            <div class="left_menu">
-
-                <div class="line_header">
-                    
-                    <div class="user">
+            <div class="left_col d_flex">
+                <div class="line_header d_flex">
+                    <div class="user d_flex">
 
                         <div class="logo">
                             <img src="img/avatar_io.jpg" alt="">
                         </div>
-
-                        <span>Nome Utente</span>
+                        <div class="name">Simone Severini</div>
+                        
                     </div> 
                    
-                    <div class="tools">
+                    <div class="tools d_flex">
                         <i class="fas fa-circle-notch"></i>
                         <i class="fas fa-comment-alt"></i>
                         <i class="fas fa-ellipsis-v"></i>
@@ -40,49 +36,59 @@
 
                 </div>
 
-                <div class="desk_notifications">
+                <div class="desk_notifications d_flex">
 
                     <div class="logo">
                         <i class="fas fa-bell-slash"></i>
                     </div>
                     
                     <div class="tools">
-                        <p>Ricevi notifiche di nuovi messaggi</p>
-                        <p><a href="#">Attiva notifiche desktop</a></p>
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <div><a href="#">Attiva notifiche desktop</a></div>
                     </div>
 
                 </div>
 
                 <div class="search_box">
-                    <div class="search">
+                    <div class="search d_flex">
                         <button><i class="fas fa-search"></i></button>
                         <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat" v-model="search">
                     </div>
                 </div>
 
-                <div class="contact_list">
+                <ul class="contacts_list">
 
-                </div>
+                    <li class="d_flex contact">
+                        <div class="logo">
+                            <img src="img/avatar_2.jpg" alt="">
+                        </div>
+                        <div class="contact_name">Diego</div>
+                    </li>
+
+                    
+
+
+                </ul>
         
 
             </div>
 
-            <div class="chat_box">
+            <div class="right_col d_flex">
 
-                <div class="line_header">
+                <div class="line_header d_flex">
 
-                    <div class="user">
+                    <div class="user d_flex">
 
                         <div class="logo">
                             <img src="img/avatar_1.jpg" alt="">
                         </div>
 
-                        <span>Nome Utente</span>
+                        <div class="contact_name">Michele</div>
                     </div> 
 
 
 
-                    <div class="tools">
+                    <div class="tools d_flex">
                         <i class="fas fa-circle-notch"></i>
                         <i class="fas fa-comment-alt"></i>
                         <i class="fas fa-ellipsis-v"></i>
@@ -92,9 +98,12 @@
 
                 <div class="chat">
 
+
+
+
                 </div>
 
-                <div class="line_input_chat">
+                <div class="line_input_chat d_flex">
 
                     <i class="far fa-smile"></i>
                     <input type="text" placeholder="Scrivi un messaggio">

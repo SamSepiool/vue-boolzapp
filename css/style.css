@@ -16,126 +16,156 @@ body{
     width: 80%;
     height: 95%;
     margin: 2.5vh auto;
+    border-radius: .3125rem;
+    overflow: hidden;
+}
+/* COMMON */
+.d_flex{
     display: flex;
-    /* border: 1px solid red; */
 }
 
-/* MAIN */
-/* common */
 .line_header{
-    height: 70px;
+    height: 4.375rem;
     background-color: #eaeaea;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.left_menu .line_header{
-    border-right: 1px solid lightgray;
+
+.logo{
+    width: 3.125rem;
+    min-width: 3.125rem;
+    height: 3.125rem;
+    margin: .625rem;
+    border-radius: 100%;  
+    overflow: hidden;
 }
 
-/* LEFT-MENU */
-.left_menu{
+.tools{
+    margin-left: .9375rem;
+}
+
+.tools i{
+    margin-right: 1.5625rem;
+    font-size: 1.375rem;
+    color: #b1b1b1;
+}
+/* MAIN */
+
+/* LEFT-COL */
+.left_col{
     width: 40%;
     background-color: #ffffff;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left_col .line_header{
+    border-right: .0625rem solid lightgray;
 }
 
 /* INSIDE 
  LINE_HEADER */
-.logo{
-    width: 50px;
-    margin: 10px;
-    border-radius: 50%;  
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: middle;
-}
 .logo img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.tools{
-    display: inline-block;
-}
-
-.tools i{
-    margin-right: 25px;
-    color: #b1b1b1;
-    font-size: 1.3em;
+.user{
+    align-items: center;
+    
 }
 /* ---------------- */
 
+/* NOTIFICATIONS */
 .desk_notifications{
-    height: 70px;
     background-color: #8edafc;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .desk_notifications .logo{
+    
     background-color: #f2fbff;
-    padding: 15px;
+    padding: .9375rem;
 }
 .desk_notifications .logo i{
     color: #8edafc; 
 }
 
+.desk_notifications .tools a{
+    color:#547c8e;
+}
+/* --------------------- */
+
+/* SEARCH */
 .search_box{
-    height: 50px;
+    height: 3.125rem;
     background-color: #fafafa;
-    padding: 8px;
-    /* overflow: hidden; */
-    /* border: 1px solid red; */
+    padding: .5rem;
 }
 .search{
     background-color: white;
-    display: flex;
-    /* border: 1px solid red; */
 }
 .search button,
 .search input{
-   border: 1px solid lightgray;
+   border: .0625rem solid lightgray;
 }
 .search button{
-    padding: 8px 30px;
+    padding: .5rem 1.875rem;
     background:none;
     color: #bdc0c2;
-    border-right: 1px solid lightgray;
+    border-right: .0625rem solid lightgray;
 }
 .search input{
-    padding:5px;
+    padding:.3125rem;
     flex-grow: 1;
 }
 
-.contact_list{
-    height: calc(100% - 190px);
+/* CONTACT-LIST */
+.contacts_list{
+    /* height: calc(100% - 11.875rem); */
+    flex-grow: 1;                               /* ?????*/
     overflow-y: scroll;
 }
+.contact{
+    height: 5rem;  
+    padding-left: .625rem; 
+}
 
-/* CHAT-BOX */
-.chat_box{
-    background-image: url(../img/mine.jpg);
+.contacts_list .contact .contact_name{
+    margin: .9375rem 0 0 1.25rem
+}
+
+
+/* RIGHT_COL */
+.right_col{
     width: 60%;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow-y: auto;
 }
 .chat{
-    height: calc(100% - 140px);
+    /* height: calc(100% - 8.75rem); */
+    flex-grow: 1;                      /* ?????*/
     overflow-y: scroll;
+    background-image: url(../img/mine.jpg);
 }
 
 .line_input_chat{
-    height: 70px;
+    height: 4.375rem;
     background-color: #f3eeea;
-    display: flex;
     justify-content: space-around;
     align-items: center;
-    /* border: 1px solid black; */
 }
 .line_input_chat input{
     flex-grow: 1;
+    border: .0625rem solid lightgray;
+    border-radius: .3125rem;
+    padding: .625rem;
 }
 .line_input_chat i{
-    margin: 0px 35px;
+    margin: 0rem 2.1875rem;
 }
 
 
