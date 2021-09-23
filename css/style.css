@@ -159,6 +159,9 @@ body{
     flex-grow: 1;                      /* ?????*/
     overflow-y: scroll;
     background-image: url(../img/mine.jpg);
+    flex-direction: column;
+    padding: 3.125rem;
+
 }
 
 .line_input_chat{
@@ -178,20 +181,41 @@ body{
 }
 
 /* INSIDE CHAT */
-
 .message_box{
-    height: 3.125rem;
-    max-width: 19.6875rem;
-    border-radius: .625rem
+    min-width: 19.6875rem;
+    border-radius: .625rem;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: .375rem .625rem;
+    margin-top: .625rem;
+
+}
+.message_box .text{
+    font-size: .9375rem;
+    margin-bottom: .9375rem;
+}
+.message_box .date{
+    font-size: .75rem;
+    font-weight: lighter;
+    color: #b6b9bb;
+    align-self: flex-end;
+
 }
 
 /* vue-activated */
 .sent{
     background-color: #d5f9ba;
+    /* margin-left: auto; */
+    align-self: flex-end;
 }
 
 .received{
     background-color: #ffffff;
+    align-self: flex-start;
 }
+
+
+
+
 
 

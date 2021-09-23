@@ -98,20 +98,21 @@
 
                 </div>
 
-                <div class="chat">
+                <div class="chat d_flex">
 
 
 
-                  <ul>
-                      <li class="message_box" v-for="(message, index) in contacts[currentContact].messages" :key="index" :class="message.status">
-                          <div class="text">
+
+                
+                    <div class="message_box d_flex" v-for="(message, index) in contacts[currentContact].messages" :key="index" :class="message.status">
+                        <div class="text">
                             {{message.message}}
-                          </div>
-                          <div class="date">
+                        </div>
+                        <div class="date">
                             {{message.date}}
-                          </div>
-                      </li>
-                  </ul>
+                        </div>
+                    </div>
+                
 
 
 
