@@ -52,19 +52,21 @@
                 <div class="search_box">
                     <div class="search d_flex">
                         <button><i class="fas fa-search"></i></button>
-                        <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat" v-model="search">
+                        <!-- <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat" v-model="search"> -->
                     </div>
                 </div>
 
+
+
                 <ul class="contacts_list">
-
-                    <li class="d_flex contact" v-for="(contact, index) in contacts">
-                        <div class="logo">
-                            <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
-                        </div>
-                        <div class="contact_name">{{contact.name}}</div>
-                    </li>
-
+                    <div v-for="(contact, index) in contacts">
+                        <li class="contact d_flex" @click='chooseContact(index)' :class="(index == currentContact) ? 'active' : null">
+                            <div class="logo">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
+                            </div>
+                            <div class="contact_name">{{contact.name}}</div>
+                        </li>
+                    </div>
                     
 
 
@@ -100,13 +102,25 @@
 
 
 
+                  <!-- <ul>
+                      <li class="message_box" v-for="(message, index) in contacts[currentContact].messages" :key="index">
+                          <div class="text">
+                            {{messages.message}}
+                          </div>
+                          <div class="date">
+                            {{messages.date}}
+                          </div>
+                      </li>
+                  </ul> -->
+
+
 
                 </div>
 
                 <div class="line_input_chat d_flex">
 
                     <i class="far fa-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <!-- <input type="text" placeholder="Scrivi un messaggio"> -->
                     <i class="fas fa-microphone"></i>
                     
                 </div>

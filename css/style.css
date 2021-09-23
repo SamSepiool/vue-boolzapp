@@ -133,11 +133,20 @@ body{
     padding-left: .625rem; 
     border-bottom: .0625rem solid lightgray;
 }
+.contact:hover{
+    background-color: #e9ebeb;
+    cursor: pointer;
+}
 
 .contacts_list .contact .contact_name{
     margin: .9375rem 0 0 1.25rem
 }
 
+/* vue-activated */
+.active{
+    background-color: #e9ebeb;
+
+}
 
 /* RIGHT_COL */
 .right_col{
@@ -167,6 +176,15 @@ body{
 }
 .line_input_chat i{
     margin: 0rem 2.1875rem;
+}
+
+/* INSIDE CHAT */
+
+.message_box{
+    border: 1px solid blue;
+    height: 3.125rem;
+    max-width: 19.6875rem;
+    border-radius: .625rem
 }
 
 
