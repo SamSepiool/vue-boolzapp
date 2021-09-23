@@ -188,7 +188,6 @@ body{
     justify-content: space-around;
     padding: .375rem .625rem;
     margin-top: .625rem;
-
 }
 .message_box .text{
     font-size: .9375rem;
@@ -205,7 +204,6 @@ body{
 /* vue-activated */
 .sent{
     background-color: #d5f9ba;
-    /* margin-left: auto; */
     align-self: flex-end;
 }
 

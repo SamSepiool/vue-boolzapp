@@ -100,10 +100,6 @@
 
                 <div class="chat d_flex">
 
-
-
-
-                
                     <div class="message_box d_flex" v-for="(message, index) in contacts[currentContact].messages" :key="index" :class="message.status">
                         <div class="text">
                             {{message.message}}
@@ -112,16 +108,13 @@
                             {{message.date}}
                         </div>
                     </div>
-                
-
-
 
                 </div>
 
                 <div class="line_input_chat d_flex">
 
                     <i class="far fa-smile"></i>
-                    <!-- <input type="text" placeholder="Scrivi un messaggio"> -->
+                    <input type="text" placeholder="Scrivi un messaggio" v-model='newMessage' @keyup.enter='pushNewMessage'>
                     <i class="fas fa-microphone"></i>
                     
                 </div>

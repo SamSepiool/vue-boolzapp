@@ -89,12 +89,22 @@ const app = new Vue ({
         ],
 
         currentContact: 0,
+
+        newMessage: '',
     },
     methods: {
 
         chooseContact: function(index){
             this.currentContact = index;
             console.log(this.currentContact)
+        },
+
+        pushNewMessage: function(){
+            if(this.newMessage != ''){
+                let transferObj = {date: '23/09/21 20:30:56', message: this.newMessage, status: 'sent'};
+                this.contacts[this.currentContact].messages.push(transferObj);
+                this.newMessage = '';
+            }
         }
     }
 
