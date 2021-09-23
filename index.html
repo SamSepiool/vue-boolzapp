@@ -82,10 +82,10 @@
                     <div class="user d_flex">
 
                         <div class="logo">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`" alt="">
                         </div>
 
-                        <div class="contact_name">Michele</div>
+                        <div class="contact_name">{{contacts[currentContact].name}}</div>
                     </div> 
 
 
@@ -102,16 +102,16 @@
 
 
 
-                  <!-- <ul>
-                      <li class="message_box" v-for="(message, index) in contacts[currentContact].messages" :key="index">
+                  <ul>
+                      <li class="message_box" v-for="(message, index) in contacts[currentContact].messages" :key="index" :class="message.status">
                           <div class="text">
-                            {{messages.message}}
+                            {{message.message}}
                           </div>
                           <div class="date">
-                            {{messages.date}}
+                            {{message.date}}
                           </div>
                       </li>
-                  </ul> -->
+                  </ul>
 
 
 

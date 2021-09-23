@@ -96,7 +96,6 @@ const app = new Vue ({
             this.currentContact = index;
             console.log(this.currentContact)
         }
-        
     }
 
 })

@@ -145,7 +145,6 @@ body{
 /* vue-activated */
 .active{
     background-color: #e9ebeb;
-
 }
 
 /* RIGHT_COL */
@@ -181,11 +180,18 @@ body{
 /* INSIDE CHAT */
 
 .message_box{
-    border: 1px solid blue;
     height: 3.125rem;
     max-width: 19.6875rem;
     border-radius: .625rem
 }
 
+/* vue-activated */
+.sent{
+    background-color: #d5f9ba;
+}
+
+.received{
+    background-color: #ffffff;
+}
 
 
