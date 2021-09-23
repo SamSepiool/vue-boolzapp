@@ -91,8 +91,35 @@ const app = new Vue ({
         currentContact: 0,
 
         newMessage: '',
+
+        answers: [
+            'L’inverno sta arrivando.',
+            'Ci vediamo in un’altra vita, fratello',
+            'Soldi o piombo?',
+            'Si sentiranno molto stupidi quando lo scopriranno… Hanno fatto incazzare le persone sbagliate.',
+            'Sfida accettata.',
+            'Dai ad un uomo una pistola e rapinerà una banca. Dai una banca ad un uomo e rapinerà il mondo.',
+            'Tu non sai niente, Jon Snow.',
+            'Le persone non cambiano.',
+            'Ce ripigliamm’ tutt’ chell che è ‘o nuost.',
+            'Sta’ senza pensier.',
+            'Un Lannister paga sempre i suoi debiti.',
+            '4 8 15 16 23 42',
+            'Dobbiamo spostare l’isola',
+            'Noi esorcizziamo i demoni. Abitanti di tutto il mondo, siamo qui per aiutarvi. Se avete interesse a svegliarvi dal vostro torpore di recuperare la memoria persa, danneggiata o rubata, noi siamo qui per voi, vi copriamo le spalle, siamo la FSociety.',
+            'Credo che la coscienza umana sia un tragico passo falso dell’evoluzione. Siamo troppo consapevoli di noi stessi. La natura ha creato un aspetto della natura separato da sé stessa. Siamo creature che non dovrebbero esistere… per le leggi della natura.',
+            'Siamo tutti nello stesso ghetto, una fogna gigante nello spazio.',
+            'La teoria dell’oliva si basa sui miei amici Marshall e Lily: lui odia le olive, lei le adora, sarà per questo che sono la coppia perfetta, col giusto equilibrio',
+            'By order of the Peaky fucking Blinders!',
+            'Dobbiamo aumentare i prezzi. Accaparrati il mercato e aumenta i prezzi: è la base dell economia',
+            'Tu sei un cane, non vedi i colori, quindi non puoi vedere i colori della bandiera americana, comunista',
+        ]
     },
     methods: {
+
+        randomNum: function() {
+            return Math.floor(Math.random() * ( this.answers.length + 1) ) + 0;
+          },
 
         chooseContact: function(index){
             this.currentContact = index;
@@ -105,7 +132,15 @@ const app = new Vue ({
                 this.contacts[this.currentContact].messages.push(transferObj);
                 this.newMessage = '';
             }
-        }
-    }
+            setTimeout(() =>{
+                let reply = {date: '23/09/21 20:30:56', message: this.answers[this.randomNum()], status: 'received'};
+                this.contacts[this.currentContact].messages.push(reply);
+                
+            }, 1000)
 
+        }
+        
+    }
+   
 })
+
