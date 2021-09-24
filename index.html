@@ -17,6 +17,7 @@
         <!-- MAIN APP-BOX -->
         <div id="root" class="d_flex">
 
+            <!-- SIDEBAR -->
             <div class="left_col d_flex">
                 <div class="line_header d_flex">
                     <div class="user d_flex">
@@ -25,17 +26,16 @@
                             <img src="img/avatar_io.jpg" alt="">
                         </div>
                         <div class="name">Simone Severini</div>
-                        
-                    </div> 
-                   
+                    </div>
+
                     <div class="tools d_flex">
                         <i class="fas fa-circle-notch"></i>
                         <i class="fas fa-comment-alt"></i>
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
-
                 </div>
 
+                <!-- DESKTOP NOTIFICATIONS -->
                 <div class="desk_notifications d_flex">
 
                     <div class="logo">
@@ -46,9 +46,9 @@
                         <div>Ricevi notifiche di nuovi messaggi</div>
                         <div><a href="#">Attiva notifiche desktop</a></div>
                     </div>
-
                 </div>
 
+                <!-- SEARCH CONTACTS -->
                 <div class="search_box">
                     <div class="search d_flex">
                         <button><i class="fas fa-search"></i></button>
@@ -56,8 +56,7 @@
                     </div>
                 </div>
 
-
-
+                <!-- CONTACTS -->
                 <ul class="contacts_list">
                     <div v-for="(contact, index) in contacts">
                         <li class="contact d_flex" @click='chooseContact(index)' :class="(index == currentContact) ? 'active' : null">
@@ -67,16 +66,11 @@
                             <div class="contact_name">{{contact.name}}</div>
                         </li>
                     </div>
-                    
-
-
                 </ul>
-        
-
             </div>
 
+            <!-- CHAT-COL -->
             <div class="right_col d_flex">
-
                 <div class="line_header d_flex">
 
                     <div class="user d_flex">
@@ -98,6 +92,7 @@
 
                 </div>
 
+                <!-- MESSAGE-FIELD -->
                 <div class="chat d_flex">
 
                     <div class="message_box d_flex" v-for="(message, index) in contacts[currentContact].messages" :key="index" :class="message.status">
@@ -111,24 +106,16 @@
 
                 </div>
 
+                <!-- CHAT-INPUT -->
                 <div class="line_input_chat d_flex">
-
                     <i class="far fa-smile"></i>
                     <input type="text" placeholder="Scrivi un messaggio" v-model='newMessage' @keyup.enter='pushNewMessage'>
                     <i class="fas fa-microphone"></i>
-                    
                 </div>
-
             </div>
-            
-
-
-
         </div>
         
-        
-
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js" integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- VUE.JS -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <!-- JAVASCRIPT -->

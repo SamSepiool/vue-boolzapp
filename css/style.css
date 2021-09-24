@@ -132,14 +132,11 @@ body{
     height: 5rem;  
     padding-left: .625rem; 
     border-bottom: .0625rem solid lightgray;
+    align-items: center;
 }
 .contact:hover{
     background-color: #e9ebeb;
     cursor: pointer;
-}
-
-.contacts_list .contact .contact_name{
-    margin: .9375rem 0 0 1.25rem
 }
 
 /* vue-activated */
@@ -161,11 +158,11 @@ body{
     background-image: url(../img/mine.jpg);
     flex-direction: column;
     padding: 3.125rem;
-
 }
 
 .line_input_chat{
     height: 4.375rem;
+    min-height: 3.125rem;
     background-color: #f3eeea;
     justify-content: space-around;
     align-items: center;
