@@ -48,7 +48,7 @@ const app = new Vue ({
                 ],
             },
             {
-                name: 'Samuele',
+                name: 'Diego',
                 avatar: '_3',
                 visible: true,
                 messages:  
@@ -113,34 +113,54 @@ const app = new Vue ({
             'By order of the Peaky fucking Blinders!',
             'Dobbiamo aumentare i prezzi. Accaparrati il mercato e aumenta i prezzi: è la base dell economia',
             'Tu sei un cane, non vedi i colori, quindi non puoi vedere i colori della bandiera americana, comunista',
-        ]
+        ],
+
+        search: '',
     },
+
     methods: {
 
-        randomNum: function() {
-            return Math.floor(Math.random() * ( this.answers.length + 1) ) + 0;
-          },
+        randomNum() {
+            return Math.floor(Math.random() * (this.answers.length - 0 + 1) ) + 0;
+            // return Math.floor(Math.random() * this.answers.length ) + 1;
+     
+        },  
+
+        date: function() {
+            return dayjs().format('DD/MM/YYYY HH:mm:ss');
+        },
 
         chooseContact: function(index){
             this.currentContact = index;
-            console.log(this.currentContact)
         },
 
         pushNewMessage: function(){
             if(this.newMessage != ''){
-                let transferObj = {date: '23/09/21 20:30:56', message: this.newMessage, status: 'sent'};
+                let transferObj = {date: this.date(), message: this.newMessage, status: 'sent'};
                 this.contacts[this.currentContact].messages.push(transferObj);
                 this.newMessage = '';
+                
             }
             setTimeout(() =>{
-                let reply = {date: '23/09/21 20:30:56', message: this.answers[this.randomNum()], status: 'received'};
+                let reply = {date: this.date(), message: this.answers[this.randomNum()], status: 'received'};
                 this.contacts[this.currentContact].messages.push(reply);
-                
+                console.log(this.randomNum())
             }, 1000)
+
+        },
+
+        searchContact: function(){
+            this.contacts.forEach((contact) => {
+            let lower = contact.name.toLowerCase();
+            let upper = contact.name.toUpperCase(); 
+            (lower.includes(this.search) || upper.includes(this.search)) ? contact.visible = true : contact.visible = false;
+                
+            });
 
         }
         
     }
    
 })
+
 
